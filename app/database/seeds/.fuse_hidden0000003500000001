@@ -1,0 +1,15 @@
+<?php
+
+// Composer: "fzaninotto/faker": "v1.3.0"
+use Faker\Factory as Faker;
+
+class MakersTableSeeder extends Seeder {
+
+	public function run()
+	{
+		DB::table('makers')->delete();
+		Maker::create(array('Honda','Honda Motor Co., Ltd. (本田技研工業株式会社 Honda Giken Kōgyō KK?, IPA: [hoɴda] ( listen); /ˈhɒndə/) is a Japanese public multinational corporation primarily known as a manufacturer of automobiles and motorcycles.'));
+
+	}
+
+}

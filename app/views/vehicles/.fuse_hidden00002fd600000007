@@ -1,0 +1,45 @@
+@extends('layout.layout-administrator')
+
+@section('body')
+	<div class="page-wrapper">
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="section">
+					<form action="{{url('administrator/vehicles')}}" method="post" enctype="multipart/form-data">
+						<label for="name" id="name">Nama Mobil</label>
+						<input type="text" name="name" id="name">
+						<label for="description">Deskripsi</label>
+						<textarea name="description" id="description" cols="30" rows="10"></textarea>
+						<div class="row">
+							<div class="large-6 columns">
+								<label for="passenger">Jumlah Penumpang</label>
+								<input type="text" id="passenger" name="passenger">
+							</div>
+							<div class="large-6 columns">
+								<label for="price">Harga</label>
+								<input type="text" id="price" name="passenger">		
+							</div>
+						</div>
+						
+						
+						<label for="maker">Pembuat</label>
+						<select name="maker" id="maker"></select>
+
+						<div class="row">
+							<div class="large-6 columns">
+								<label for="year">Tahun</label>
+								<select name="year" id="year"></select>
+							</div>
+							<div class="large-6 columns">
+								<label for="category">Kategori</label>
+								<select name="category" id="category">
+									{{SystemController::option_array(array_categories())}}
+								</select>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+@stop

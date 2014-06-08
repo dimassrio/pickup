@@ -1,0 +1,52 @@
+@include('layout.layout-header')
+@include('include.header')
+<div class="main-wrapper">
+	<div class="page-wrapper">
+		<div class="row section">
+			<div class="page-title">
+				@if(isset($pagetitle1)&&isset($pagetitle2))
+					<h2>{{$pagetitle1}}<strong>{{$pagetitle2}}</strong></h2>
+				@elseif(isset($pagetitle1))
+					<h2><strong>{{$pagetitle1}}</strong></h2>
+				@endif
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-3 columns">
+				<h5>Menu</h5>
+				<ul class="admin-navigation">
+					<li><a href=""><i class="fi-home"></i> Dashboard</a></li>
+					<li><a href="{{url('administrator/categories')}}"><i class="fi-thumbnails"></i> Manage Categories</a></li>
+					<li><a href="{{url('administrator/users')}}"><i class="fi-torso"></i> Manage Users</a></li>
+					<li><a href="{{url('administrator/vehicles')}}"><i class="fi-flag"></i> Manage Vehicle</a></li>
+					<li><a href=""><i class="fi-info"></i> Vendor Info</a></li>
+					<li><a href=""><i class="fi-bookmark"></i> Manage Deals</a></li>
+					<li><a href=""><i class="fi-calendar"></i> Manage Packages</a></li>
+					<li><a href=""><i class="fi-book-bookmark"></i> Booking & Reservation</a></li>
+					<li><a href=""><i class="fi-torsos"></i> Claims</a></li>
+				</ul>
+			</div>
+			<div class="large-9 columns">
+				<div class="row section">
+					<div class="large-3 columns">
+						<p class="lead right">Total Member</p>
+					</div>
+					<div class="large-3 columns">
+						<p class="lead right">Transaction Sold</p>
+					</div>
+					<div class="large-3 columns">
+						<p class="lead right">Vendor</p>
+					</div>
+					<div class="large-3 columns">
+						<p class="lead right">Vehicles</p>
+					</div>
+				</div>
+				<div class="row content-section">
+					@yield('body')
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@include('include.footer')
+@include('layout.layout-footer')

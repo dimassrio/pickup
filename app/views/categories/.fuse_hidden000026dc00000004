@@ -1,0 +1,28 @@
+@extends('layout.layout-administrator')
+
+@section('body')
+	<div class="row admin-content">
+		<div class="large-12 columns">
+			<table width="100%" class="section">
+				<thead>
+					<tr>
+						<th>NO</th>
+						<th>NAME</th>
+						<th>PICTURE</th>
+						<th>ACTION</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach ($categories as $category)
+						<tr>
+							<td>{{$no++}}</td>
+							<td>{{$category->name}}</td>
+							<td><img src="{{asset($category->picture)}}" alt="picture of {{$category->name}}" width="300"></td>
+							<td><a href="{{url('administrator/categories/'.$category->id.'/edit')}}" class="button tiny">EDIT</a><a href="" class="alert button tiny">DELETE</a></td>
+						</tr>
+					@endforeach
+				</tbody>
+			</table>
+		</div>
+	</div>
+@stop
