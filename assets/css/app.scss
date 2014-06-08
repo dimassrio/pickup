@@ -1,0 +1,257 @@
+$page-wrapper-bg:#f3f3f3;
+$price-info-bg:#90a9bd;
+$featured-bg:#d8d8d8;
+/* STRUCTURE */
+.page-wrapper{
+	background-color:$page-wrapper-bg;
+}
+.section{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+/* FEATURED */
+.featured-content{
+	padding-top:100px;
+}
+.featured{
+	background: $featured-bg;
+}
+.sub-search{
+	padding:20px;
+	background-color:$page-wrapper-bg;
+	input{
+		font-size: 18px;
+		height:50px;
+	}
+}
+/* CONTENT */
+.page-title{
+	background:url("images/bg_line.png");
+	display:block;
+	h1, h2, h3, h4, h5{
+		margin-top: 0;
+		margin-bottom: 0;
+		display: inline-block;
+		padding:5px;
+		padding-right:10px;
+		background-color:#FFFFFF;
+	}
+}
+.page-wrapper .page-title{
+	@extends .page-title;
+	h1,h2,h3,h4,h5{
+		background-color:$page-wrapper-bg;
+	}
+}
+
+.price-info{
+	background-color:$price-info-bg;
+	padding:5px;
+	padding-left:30px;
+	color:#FFFFFF;
+}
+/* UTILITIES */
+nav.sub-navigation{
+	ul{
+		li{
+			a{
+				font-size: 16px;
+			}
+		}
+	}
+}
+ul.navi{
+	list-style: none;
+	list-style-type: none;
+	li{
+		float:left;
+		a{
+			display: block;
+			padding:10px;
+			font-size: 16px;
+		}
+	}
+}
+.center{
+	margin:0 auto;
+	padding:0 auto;
+}
+ul.admin-navigation{
+	list-style-image:none;
+	list-style-type:none;
+	margin-left:0;
+	li{
+		a{
+			display: block;
+			padding:10px 0;
+			color:#51575E;
+			font-weight: 600px;
+		}
+	}
+}
+
+.no-right-margin{
+	margin-right:0;
+}
+
+.no-left-margin{
+	margin-left:0;
+}
+
+.no-top-margin{
+	margin-top:0;
+}
+
+.no-bottom-margin{
+	margin-bottom:0;
+}
+
+.no-right-padding{
+	padding-right:0;
+}
+
+.no-left-padding{
+	padding-left:0;
+}
+
+.no-top-padding{
+	padding-top:0;
+}
+
+.no-bottom-padding{
+	padding-bottom:0;
+}
+/* FOOTER */
+.footer-about{
+	color:#FFFFFF;
+	background-color:#393939;
+	padding:50px 0;
+	h4{
+		color:#FFFFFF;
+	}
+}
+
+.footer-copyright{
+	color:#FFFFFF;
+	background-color:#2f2f2f;
+	font-size:12px;
+	padding:30px 0;
+}
+
+h5.footer-about-head-nav{
+	padding:10px 0;
+	font-weight:900;
+	min-height:50px;
+	color:#FFFFFF;
+	background-color:#2f2f2f;
+	display:block;
+	margin:0;
+}
+
+.list-navigation{
+	list-style-type: none;
+	list-style-image:none;
+	a{
+		display: block;
+	}
+}
+.footer-about-navigation-wrapper{
+	.footer-about-navigation{
+		li{
+			a{
+				color:#FFFFFF;
+				text-decoration: none;
+			}
+		}
+	}
+	border-top:#2f2f2f 3px solid;
+}
+
+/* BUTTON */
+$button-inverse-bg:#393939;
+.button.inverse{
+	@include button($button-med, $button-inverse-bg, false, false, false, false);
+}
+.button.inverse:hover{
+	background-color:lighten($button-inverse-bg, 10%);
+}
+
+/* LABEL */
+$label-booked-bg:#2FD206;
+$label-tag-bg:#0070DF;
+.label{
+
+}
+.label-price{
+	@include label(20px, 32px, $button-inverse-bg, 0px);
+}
+
+.label-booked{
+	@include label(10px, 16px, $label-booked-bg, 0px);
+}
+.label-tags{
+	@include label(5px, 12px, $label-tag-bg, 0px);
+}
+
+/* SEARCH */
+$search-index-main-bg: #393939;
+$search-index-main-color: #FFFFFF;
+$search-index-main-border: #A9A99C;
+$search-index-main-input-bg: #282828;
+$search-index-main-input-color: #A9A99C;
+
+$search-search-bg: #1F1F1F;
+$search-search-input-bg: #282828;
+$search-search-input-color: #A9A9A9;
+$search-search-input-border: #1B1B1B;
+
+$search-option-content-bg: #545454;
+$search-option-content-color : #DADADA;
+#search-index-main{
+	background-color: $search-index-main-bg;
+	color: $search-index-main-color;
+	padding:10px;
+	border: $search-index-main-border 2px solid;
+	h1, h2, h3, h4, h5, p{
+		color: $search-index-main-color;
+	}
+	form{
+		input:not([type=submit]), select{
+			background-color: $search-index-main-input-bg;
+			color: $search-index-main-input-color;
+		}
+		select:after{
+			color:$search-index-main-color;
+		}
+	}
+}
+#search-search-main{
+	background-color: $search-search-bg;
+}
+#search-search-content{
+	background: $search-search-bg url("images/head_page.png") no-repeat;
+	height:111px;
+	padding-top:40px;
+	input{
+		background-color: $search-search-input-bg;
+		color: $search-search-input-color;
+		border-color: $search-search-input-border;
+	}
+}
+
+#search-option-content{
+	background-color: $search-option-content-bg;
+	color: $search-option-content-color;
+	h1,h2,h3,h4,h5, p, label{
+		color: $search-option-content-color;
+	}
+}
+
+/* ADMIN */
+// CONTENT
+$admin-content-bg:#FFFFFF;
+.admin-content{
+	background:$admin-content-bg;
+	padding:10px;
+}
+
