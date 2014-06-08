@@ -5,25 +5,25 @@
 git clone git@github.com:dimassrio/pickup.git
 
 #### SOURCE CODE INSTALL
-composer install
-npm install
-bower install
+1. composer install
+2. npm install
+3. bower install
 
-grunt
-grunt cpy
+4. grunt
+5. grunt cpy
 
 #### DATABASE INSTALL
 
-CREATE DATABASE at PHP MY ADMIN
+1. CREATE DATABASE at PHP MY ADMIN
 
 database_name : pickup
 
-CHANGE DATABASE SETTING at app/config/database.php
+2. CHANGE DATABASE SETTING at app/config/database.php
 
-php artisan migrate 
+3. php artisan migrate 
 // If this show error use composer dump autoload *optional*
 
-php artisan db:seed
+4. php artisan db:seed
 
 
 ### Change
