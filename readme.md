@@ -15,11 +15,16 @@ grunt cpy
 #### DATABASE INSTALL
 
 CREATE DATABASE at PHP MY ADMIN
+
 database_name : pickup
+
 CHANGE DATABASE SETTING at app/config/database.php
 
-php artisan migrate // If this show error use composer dump autoload *optional*
+php artisan migrate 
+// If this show error use composer dump autoload *optional*
+
 php artisan db:seed
+
 
 ### Change
 1. Categories = CRU
